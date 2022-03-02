@@ -13,6 +13,7 @@ module.exports = {
       xl: '1200px',
     },
     colors: {
+      'strong-cyan': 'hsl(172, 67%, 45%)',
       'very-dark-cyan': 'hsl(183, 100%, 15%)',
       'dark-grayish-cyan': 'hsl(186, 14%, 43%)',
       'dark-grayish-cyan-alt': 'hsl(184, 14%, 56%)',
