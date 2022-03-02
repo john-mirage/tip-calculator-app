@@ -8,6 +8,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-aria/radio": "^3.1.8",
+    "@react-aria/textfield": "^3.5.2",
+    "@react-aria/visually-hidden": "^3.2.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
