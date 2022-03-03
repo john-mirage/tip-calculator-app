@@ -1,7 +1,7 @@
 import { useTextField } from '@react-aria/textfield';
 import { useRef } from 'react';
 
-function TextField(props) {
+export function TextField(props) {
     let { label } = props;
     let ref = useRef();
     let { labelProps, inputProps, descriptionProps, errorMessageProps } = useTextField(props, ref);
@@ -29,4 +29,11 @@ function TextField(props) {
     );
 }
 
-export default TextField
+export function CustomTextField(props) {
+    let ref = useRef();
+    let { labelProps, inputProps, descriptionProps, errorMessageProps } = useTextField(props, ref);
+
+    return (
+        <input className="block w-full h-14 bg-light-grayish-cyan-alt rounded-lg px-6 text-right text-very-dark-cyan text-2xl font-bold outline-strong-cyan transition-[outline] placeholder:text-dark-grayish-cyan" {...inputProps} ref={ref} />
+    )
+}
