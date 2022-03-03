@@ -27,11 +27,11 @@ function Form({ setTotalTip, setTotal }: Props) {
     }, [bill, tip, customTip, people])
 
     return (
-        <div className="w-full h-auto">
+        <div className="w-full h-auto lg:pr-6">
             <NumberField
                 label="Bill"
                 minValue={0}
-                formatOptions={{ minimumFractionDigits: 2, maximumFractionDigits: 2 }}
+                formatOptions={{ style: "currency", currency: "USD" }}
                 value={bill}
                 onChange={setBill}
             >
@@ -66,7 +66,7 @@ function Form({ setTotalTip, setTotal }: Props) {
             <NumberFieldCustom
                 minValue={0}
                 defaultValue={0}
-                formatOptions={{ style: "percent",  maximumFractionDigits: 0 }}
+                formatOptions={{ style: "percent",  maximumFractionDigits: 2 }}
                 onChange={setCustomTip}
                 value={customTip}
                 aria-labelledby="tip-choices"

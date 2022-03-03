@@ -7,7 +7,7 @@ function Dialog() {
     const [ total, setTotal ] = useState(0)
 
     return (
-        <main className="w-full min-h-dialog bg-white rounded-t-3xl px-6 pt-6 pb-12">
+        <main className="w-full min-h-dialog bg-white rounded-t-3xl px-6 pt-6 pb-12 sm:container sm:p-12 sm:min-h-0 sm:rounded-3xl lg:flex lg:flex-row">
             <Form
                 setTotalTip={ setTotalTip }
                 setTotal={ setTotal }

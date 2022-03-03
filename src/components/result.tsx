@@ -8,7 +8,7 @@ function Result({ totalTip, total }: Props) {
     const formatedTotal = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(total);
 
     return (
-        <div className="w-full h-auto pt-10 px-6 pb-6 bg-very-dark-cyan rounded-2xl">
+        <div className="w-full h-auto pt-10 px-6 pb-6 bg-very-dark-cyan rounded-2xl lg:ml-6">
             <div className="flex flex-row justify-between items-center w-full h-auto mb-6">
                 <div className="w-auto h-auto">
                     <h3 className="text-white text-base font-bold mb-0.5">Tip Amount</h3>

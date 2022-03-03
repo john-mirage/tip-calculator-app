@@ -2,7 +2,7 @@ import Dialog from '@components/dialog'
 
 function Page() {
     return (
-        <div className="w-full min-h-screen bg-light-grayish-cyan">
+        <div className="w-full min-h-screen bg-light-grayish-cyan sm:flex sm:flex-col sm:justify-start sm:items-center">
             <header className="flex w-full h-40">
                 <a className="w-auto h-auto m-auto" href="/">
                     <svg className="w-auto h-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87 54">
