@@ -21,9 +21,6 @@ module.exports = {
       'light-grayish-cyan-alt': 'hsl(189, 41%, 97%)',
       'white': 'hsl(0, 0%, 100%)',
     },
-    minHeight: {
-      'dialog': 'calc(100vh - 10rem)',
-    },
     extend: {
       fontFamily: {
         sans: [
@@ -33,6 +30,9 @@ module.exports = {
       },
       spacing: {
         'custom-field': 'calc(50% - 0.5rem)',
+      },
+      minHeight: {
+        'dialog': 'calc(100vh - 10rem)',
       },
     },
   },
