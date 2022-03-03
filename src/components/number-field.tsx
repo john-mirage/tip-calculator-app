@@ -1,7 +1,7 @@
-import { useNumberField } from '@react-aria/numberfield';
-import { useNumberFieldState } from '@react-stately/numberfield';
-import { useLocale } from '@react-aria/i18n';
-import { useRef } from 'react';
+import { useNumberField } from '@react-aria/numberfield'
+import { useNumberFieldState } from '@react-stately/numberfield'
+import { useLocale } from '@react-aria/i18n'
+import { useRef } from 'react'
 
 function NumberField(props) {
     let { locale } = useLocale();
@@ -13,7 +13,7 @@ function NumberField(props) {
         <div className="w-full h-auto mb-8">
             <label className="block w-full h-auto text-dark-grayish-cyan text-base font-bold mb-2" {...labelProps}>{props.label}</label>
             <div className="relative w-full h-auto" {...groupProps}>
-                <input className="block w-full h-14 bg-light-grayish-cyan-alt rounded-lg px-6 text-right text-very-dark-cyan text-2xl font-bold outline-strong-cyan transition-[outline] placeholder:text-dark-grayish-cyan" placeholder="0" {...inputProps} ref={inputRef} />
+                <input className="block w-full h-14 bg-light-grayish-cyan-alt rounded-lg px-6 text-right text-very-dark-cyan text-2xl font-bold outline-strong-cyan transition-[outline] placeholder:text-dark-grayish-cyan" {...inputProps} ref={inputRef} />
                 <div className="absolute top-1/2 left-6 -translate-y-1/2 w-auto h-auto">
                     { props.children }
                 </div>
