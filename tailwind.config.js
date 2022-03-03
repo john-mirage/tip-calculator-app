@@ -28,9 +28,6 @@ module.exports = {
           ...defaultTheme.fontFamily.sans,
         ]
       },
-      spacing: {
-        'custom-field': 'calc(50% - 0.5rem)',
-      },
       minHeight: {
         'dialog': 'calc(100vh - 10rem)',
       },
