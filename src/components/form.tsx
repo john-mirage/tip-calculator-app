@@ -11,20 +11,22 @@ interface Props {
 
 function Form({ setTotalTip, setTotal }: Props) {
     const [ bill, setBill ] = useState(0)
-    const [ tip, setTip ] = useState(0)
-    const [ customTip, setCustomTip ] = useState(0)
-    const [ people, setPeople ] = useState(0)
+    const [ tip, setTip ] = useState("0")
+    const [ people, setPeople ] = useState(1)
 
     useEffect(() => {
-        if (bill > 0 && tip > 0 && people > 0) {
-            const tipResult = customTip > 0 ? (bill / 100) * (customTip * 100) : (bill / 100) * tip
+        const tipNumber = parseInt(tip)
+        if (bill > 0 && tipNumber > 0 && people > 0) {
+            const tipResult = (bill / 100) * tipNumber
             setTotalTip(tipResult / people)
             setTotal((bill / people) + (tipResult / people))
         } else {
             setTotalTip(0)
             setTotal(0)
         }
-    }, [bill, tip, customTip, people])
+    }, [bill, tip, people])
+
+    console.log(tip)
 
     return (
         <div className="w-full h-auto lg:pr-6">
@@ -40,42 +42,25 @@ function Form({ setTotalTip, setTotal }: Props) {
                 </svg>
             </NumberField>
 
-            <RadioGroup label="Select Tip %" onChange={setTip}>
-                <Radio
-                    value="5"
-                    customTip={customTip}
-                >5%</Radio>
-                <Radio
-                    value="10"
-                    customTip={customTip}
-                >10%</Radio>
-                <Radio
-                    value="15"
-                    customTip={customTip}
-                >15%</Radio>
-                <Radio
-                    value="25"
-                    customTip={customTip}
-                >25%</Radio>
-                <Radio
-                    value="50"
-                    customTip={customTip}
-                >50%</Radio>
+            <RadioGroup label="Select Tip %" onChange={setTip} value={tip}>
+                <Radio value="5">5%</Radio>
+                <Radio value="10">10%</Radio>
+                <Radio value="15">15%</Radio>
+                <Radio value="25">25%</Radio>
+                <Radio value="50">50%</Radio>
             </RadioGroup>
 
             <NumberFieldCustom
                 minValue={0}
                 defaultValue={0}
                 formatOptions={{ style: "percent",  maximumFractionDigits: 2 }}
-                onChange={setCustomTip}
-                value={customTip}
+                onChange={(newTip: number) => setTip(`${newTip * 100}`)}
                 aria-labelledby="tip-choices"
             />
 
             <NumberField
                 label="Number of People"
-                minValue={0}
-                defaultValue={0}
+                minValue={1}
                 formatOptions={{ maximumFractionDigits: 0 }}
                 value={people}
                 onChange={setPeople}
