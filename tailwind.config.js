@@ -31,6 +31,9 @@ module.exports = {
           ...defaultTheme.fontFamily.sans,
         ]
       },
+      spacing: {
+        'custom-field': 'calc(50% - 0.5rem)',
+      },
     },
   },
   plugins: [],
