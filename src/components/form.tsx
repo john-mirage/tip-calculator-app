@@ -34,7 +34,11 @@ function Form({
                 </svg>
             </NumberField>
 
-            <RadioGroup label="Select Tip %" onChange={(newTip: string) => setTip(Number(newTip))} value={String(tip)}>
+            <RadioGroup
+                label="Select Tip %"
+                onChange={(newTip: string) => setTip(Number(newTip))}
+                value={String(tip)}
+            >
                 <Radio value="0.05">5%</Radio>
                 <Radio value="0.1">10%</Radio>
                 <Radio value="0.15">15%</Radio>
