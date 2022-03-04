@@ -3,18 +3,31 @@ import Result from '@components/result'
 import { useState } from 'react'
 
 function Dialog() {
-    const [ totalTip, setTotalTip ] = useState(0)
-    const [ total, setTotal ] = useState(0)
+    const [ bill, setBill ] = useState(0)
+    const [ tip, setTip ] = useState(0)
+    const [ people, setPeople ] = useState(1)
+
+    function resetForm() {
+        if (bill > 0) setBill(0)
+        if (tip > 0) setTip(0)
+        if (people > 1) setPeople(1)
+    }
 
     return (
         <main className="w-full min-h-dialog bg-white rounded-t-3xl px-6 pt-6 pb-12 sm:container sm:p-12 sm:min-h-0 sm:rounded-3xl lg:flex lg:flex-row">
             <Form
-                setTotalTip={ setTotalTip }
-                setTotal={ setTotal }
+                bill={ bill }
+                tip={ tip }
+                people={ people }
+                setBill={ setBill }
+                setTip={ setTip }
+                setPeople={ setPeople }
             />
             <Result
-                totalTip={ totalTip }
-                total={ total }
+                bill={ bill }
+                tip={ tip }
+                people={ people }
+                resetForm={ resetForm }
             />
         </main>
     )
