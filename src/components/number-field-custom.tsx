@@ -10,8 +10,8 @@ function NumberFieldCustom(props) {
     let { groupProps, inputProps } = useNumberField(props, state, inputRef);
 
     return (
-        <div className="grid grid-cols-1 w-full h-auto mb-8 mt-4 xs:-mt-14 xs:grid-cols-2 xs:gap-4 xl:grid-cols-3" {...groupProps}>
-            <input className="block w-full h-14 bg-light-grayish-cyan-alt rounded-lg px-6 text-right text-very-dark-cyan text-2xl font-bold outline-strong-cyan transition-[outline] placeholder:text-dark-grayish-cyan xs:col-start-2 xl:col-start-3" {...inputProps} ref={inputRef} />
+        <div className="grid grid-cols-1 w-full h-auto mb-6 mt-4 xs:-mt-12 xs:grid-cols-2 xs:gap-4 xl:grid-cols-3" {...groupProps}>
+            <input className="block w-full h-12 bg-light-grayish-cyan-alt rounded-md px-6 text-right text-very-dark-cyan text-2xl font-bold outline-strong-cyan transition-[outline] placeholder:text-dark-grayish-cyan xs:col-start-2 xl:col-start-3" {...inputProps} ref={inputRef} />
         </div>
     );
 }

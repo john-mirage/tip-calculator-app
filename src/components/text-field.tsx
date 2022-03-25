@@ -10,7 +10,7 @@ export function TextField(props) {
         <div className="w-full h-auto mb-8">
             <label className="block w-full h-auto text-dark-grayish-cyan text-base font-bold mb-2" {...labelProps}>{label}</label>
             <div className="relative w-full h-auto">
-                <input className="block w-full h-14 bg-light-grayish-cyan-alt rounded-lg px-6 text-right text-very-dark-cyan text-2xl font-bold outline-strong-cyan transition-[outline] placeholder:text-dark-grayish-cyan" {...inputProps} ref={ref} />
+                <input className="block w-full h-12 bg-light-grayish-cyan-alt rounded-md px-6 text-right text-very-dark-cyan text-2xl font-bold outline-strong-cyan transition-[outline] placeholder:text-dark-grayish-cyan" {...inputProps} ref={ref} />
                 <div className="absolute top-1/2 left-6 -translate-y-1/2 w-auto h-auto">
                     { props.children }
                 </div>

@@ -10,7 +10,7 @@ function Button(props) {
 
     return (
         <button
-            className={`block w-full rounded-lg text-center p-3 text-2xl uppercase font-bold transition-colors lg:mt-auto select-none ${isPressed ? "bg-light-grayish-cyan text-strong-cyan" : "bg-strong-cyan text-very-dark-cyan"} ${isFocusVisible ? "ring-1 ring-light-grayish-cyan" : ""}`}
+            className={`block w-full rounded-md text-center p-2 text-xl uppercase font-bold transition-colors lg:mt-auto select-none ${isPressed ? "bg-light-grayish-cyan text-strong-cyan" : "bg-strong-cyan text-very-dark-cyan"} ${isFocusVisible ? "ring-1 ring-light-grayish-cyan" : ""}`}
             {...buttonProps}
             {...focusProps}
             ref={ref}

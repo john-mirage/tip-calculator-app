@@ -13,7 +13,7 @@ function Radio(props) {
     let isSelected = state.selectedValue === props.value
 
     return (
-        <label className={`block w-full h-14 rounded-lg text-center text-2xl font-bold leading-[3.5rem] transition-colors cursor-pointer ${isSelected ? "bg-strong-cyan text-very-dark-cyan" : "bg-very-dark-cyan text-white"} ${isFocusVisible ? "ring-2 ring-offset-2 ring-strong-cyan" : ""}`}>
+        <label className={`block w-full h-12 rounded-md text-center text-2xl font-bold leading-[3rem] transition-colors cursor-pointer ${isSelected ? "bg-strong-cyan text-very-dark-cyan" : "bg-very-dark-cyan text-white"} ${isFocusVisible ? "ring-2 ring-offset-2 ring-strong-cyan" : ""}`}>
             <VisuallyHidden>
                 <input {...inputProps} {...focusProps} ref={ref}  />
             </VisuallyHidden>
