@@ -1,8 +1,10 @@
 import RadioGroupContext from '@contexts/radio-group-context';
 import { useRadioGroup } from '@react-aria/radio';
 import { useRadioGroupState } from '@react-stately/radio';
+import { AriaRadioGroupProps } from '@react-types/radio';
+import { PropsWithChildren } from 'react';
 
-function RadioGroup(props) {
+function RadioGroup(props: PropsWithChildren<AriaRadioGroupProps>) {
     let {children, label} = props;
     let state = useRadioGroupState(props);
     let {radioGroupProps, labelProps} = useRadioGroup(props, state);

@@ -1,12 +1,17 @@
 import { useNumberField } from '@react-aria/numberfield'
 import { useNumberFieldState } from '@react-stately/numberfield'
 import { useLocale } from '@react-aria/i18n'
-import { useRef } from 'react'
+import { PropsWithChildren, RefObject, useRef } from 'react'
+import { AriaNumberFieldProps } from '@react-types/numberfield';
 
-function NumberField(props) {
+interface NumberFieldProps extends AriaNumberFieldProps {
+    margin?: boolean;
+}
+
+function NumberField(props: PropsWithChildren<NumberFieldProps>) {
     let { locale } = useLocale();
     let state = useNumberFieldState({...props, locale});
-    let inputRef = useRef();
+    let inputRef = useRef() as RefObject<HTMLInputElement>;
     let { labelProps, groupProps, inputProps } = useNumberField(props, state, inputRef);
 
     return (

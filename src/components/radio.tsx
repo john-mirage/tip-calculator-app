@@ -1,12 +1,14 @@
 import { useRadio } from '@react-aria/radio';
 import { VisuallyHidden } from '@react-aria/visually-hidden';
 import { useFocusRing } from '@react-aria/focus';
-import { useContext, useRef } from 'react';
+import { PropsWithChildren, useContext, useRef } from 'react';
 import RadioGroupContext from '@contexts/radio-group-context';
+import { AriaRadioProps } from '@react-types/radio';
+import { RadioGroupState } from '@react-stately/radio';
 
-function Radio(props) {
+function Radio(props: PropsWithChildren<AriaRadioProps>) {
     let { children } = props
-    let state = useContext(RadioGroupContext)
+    let state = useContext(RadioGroupContext) as RadioGroupState
     let ref = useRef(null)
     let { inputProps } = useRadio(props, state, ref)
     let { isFocusVisible, focusProps } = useFocusRing();

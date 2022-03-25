@@ -1,18 +1,26 @@
 import { useButton } from '@react-aria/button';
-import { useFocusRing } from '@react-aria/focus';
-import { useRef } from 'react';
+import { AriaButtonProps } from "@react-types/button";
+import { PropsWithChildren, RefObject, useRef } from 'react';
 
-function Button(props) {
+function Button(props: PropsWithChildren<AriaButtonProps>) {
     let { children } = props;
-    let ref = useRef();
-    let { buttonProps, isPressed } = useButton({...props, elementType: 'span'}, ref);
-    let { isFocusVisible, focusProps } = useFocusRing();
+    const ref = useRef() as RefObject<HTMLButtonElement>;
+    let { buttonProps, isPressed } = useButton({...props, elementType: 'button'}, ref);
+
+    let colors = " ";
+
+    if (props.isDisabled) {
+        colors += "bg-[#0D686D] text-very-dark-cyan";
+    } else if (isPressed) {
+        colors += "bg-light-grayish-cyan text-strong-cyan";
+    } else {
+        colors += "bg-strong-cyan text-very-dark-cyan";
+    }
 
     return (
         <button
-            className={`block w-full rounded-md text-center p-2 text-xl uppercase font-bold transition-colors dialog:mt-auto select-none ${isPressed ? "bg-light-grayish-cyan text-strong-cyan" : "bg-strong-cyan text-very-dark-cyan"} ${isFocusVisible ? "ring-1 ring-light-grayish-cyan" : ""}`}
+            className={`block w-full rounded-md text-center p-2 text-xl uppercase font-bold transition-colors dialog:mt-auto select-none${colors}`}
             {...buttonProps}
-            {...focusProps}
             ref={ref}
         >
             {children}

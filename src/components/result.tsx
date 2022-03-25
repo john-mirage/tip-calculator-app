@@ -36,7 +36,7 @@ function Result({
                 <p className="text-strong-cyan text-center text-[2rem] font-bold 2xs:text-right sm:text-[2.875rem]">{ numberFormater.format(totalPerPerson) }</p>
             </div>
 
-            <Button onPress={ resetForm }>reset</Button>
+            <Button isDisabled={bill === 0} onPress={ resetForm }>reset</Button>
         </div>
     )
 }
