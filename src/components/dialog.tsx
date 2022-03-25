@@ -14,7 +14,7 @@ function Dialog() {
     }
 
     return (
-        <main className="w-full min-h-dialog bg-white rounded-t-3xl px-8 py-8">
+        <main className="w-full min-h-dialog max-w-dialog mx-auto bg-white rounded-t-3xl px-8 py-9 dialog:min-h-0 dialog:rounded-3xl dialog:flex dialog:flex-row dialog:pl-12 dialog:pb-8 dialog:pr-8 dialog:pt-8">
             <Form
                 bill={ bill }
                 tip={ tip }

@@ -10,7 +10,7 @@ function RadioGroup(props) {
     return (
         <div className="w-full h-auto" {...radioGroupProps}>
             <span className="block w-full h-auto text-dark-grayish-cyan text-base font-bold mb-3" {...labelProps} id="tip-choices">{label}</span>
-            <div className="grid grid-cols-1 gap-4 w-full h-auto xs:grid-cols-2 xl:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 w-full h-auto xs:grid-cols-2 md:grid-cols-3">
                 <RadioGroupContext.Provider value={state}>
                     { children }
                 </RadioGroupContext.Provider>

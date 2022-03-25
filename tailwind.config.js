@@ -9,10 +9,8 @@ module.exports = {
     screens: {
       xs: '320px',
       '2xs': '375px',
-      sm: '576px',
       md: '768px',
-      lg: '992px',
-      xl: '1200px',
+      dialog: '920px',
     },
     colors: {
       'strong-cyan': 'hsl(172, 67%, 45%)',
@@ -31,7 +29,10 @@ module.exports = {
         ]
       },
       minHeight: {
-        'dialog': 'calc(100vh - 10rem)',
+        'dialog': 'calc(100vh - 9rem)',
+      },
+      maxWidth: {
+        'dialog': '57.5rem',
       },
     },
   },
