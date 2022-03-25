@@ -9,6 +9,7 @@ module.exports = {
     screens: {
       xs: '320px',
       '2xs': '375px',
+      sm: '576px',
       md: '768px',
       dialog: '920px',
     },

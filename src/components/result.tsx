@@ -25,7 +25,7 @@ function Result({
                     <h3 className="text-white text-base font-bold mb-0.5">Tip Amount</h3>
                     <p className="text-dark-grayish-cyan-alt text-[0.8125rem] font-bold">/ person</p>
                 </div>
-                <p className="text-strong-cyan text-center text-[2rem] font-bold 2xs:text-right md:text-[2.875rem]">{ numberFormater.format(tipPerPerson) }</p>
+                <p className="text-strong-cyan text-center text-[2rem] font-bold 2xs:text-right sm:text-[2.875rem]">{ numberFormater.format(tipPerPerson) }</p>
             </div>
 
             <div className="flex flex-col w-full h-auto mb-8 2xs:flex-row 2xs:justify-between 2xs:items-center">
@@ -33,7 +33,7 @@ function Result({
                     <h3 className="text-white text-base font-bold mb-0.5">Total</h3>
                     <p className="text-dark-grayish-cyan-alt text-[0.8125rem] font-bold">/ person</p>
                 </div>
-                <p className="text-strong-cyan text-center text-[2rem] font-bold 2xs:text-right md:text-[2.875rem]">{ numberFormater.format(totalPerPerson) }</p>
+                <p className="text-strong-cyan text-center text-[2rem] font-bold 2xs:text-right sm:text-[2.875rem]">{ numberFormater.format(totalPerPerson) }</p>
             </div>
 
             <Button onPress={ resetForm }>reset</Button>
