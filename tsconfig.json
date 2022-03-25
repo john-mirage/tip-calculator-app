@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext", "ESNext.Intl"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext", "es2021.intl"],
     "allowJs": false,
     "skipLibCheck": false,
     "esModuleInterop": false,
