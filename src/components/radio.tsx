@@ -16,7 +16,7 @@ function Radio(props: PropsWithChildren<AriaRadioProps>) {
 
     return (
         <label className={`block w-full h-12 rounded-md text-center text-2xl font-bold leading-[3rem] transition-colors cursor-pointer ${isSelected ? "bg-strong-cyan text-very-dark-cyan" : "bg-very-dark-cyan text-white"} ${isFocusVisible ? "ring-2 ring-offset-2 ring-strong-cyan" : ""}`}>
-            <VisuallyHidden>
+            <VisuallyHidden elementType="span">
                 <input {...inputProps} {...focusProps} ref={ref}  />
             </VisuallyHidden>
             { children }
